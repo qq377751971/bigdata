@@ -37,16 +37,6 @@ public class YamlUtil {
 
     public static Object getProperty(String allKey){
         String[] keys = allKey.split("\\.");
-        // 根路径
-        Map<String, Object> childMap = yamlMap;
-        for (String key : keys){
-            Object o = childMap.get(key);
-            // 非map实例退出
-            if (!(o instanceof Map)){
-                return childMap.getOrDefault(key, null);
-            }
-            childMap = (Map<String, Object>) o;
-        }
-        return childMap;
+        return getProperty(keys);
     }
 }
