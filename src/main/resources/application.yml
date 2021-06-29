@@ -47,3 +47,12 @@ zookeeper:
   maxRetries: 3
   # 初始休眠时间
   baseSleepTimeMs: 1000
+
+# canal
+canal:
+  user: canal
+  password: canal
+  destination: example
+  single:
+    host: 10.211.55.5
+    port: 11111
