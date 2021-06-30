@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/kafka/consumer")
 public class UserConsumerController {
 
-    @KafkaListener(topics = {"kafka-test"})
+//    @KafkaListener(topics = {"kafka-test"})
     public void receive(GenericRecord genericRecord) throws Exception{
         System.out.println("数据接收：user + "+  genericRecord.toString());
         //业务处理类,mybatispuls 自动生成的类

@@ -1,0 +1,5 @@
+# 运行任务
+python ./bin/datax.py ./job/job.json
+
+# 带参数
+python ./bin/datax.py -p "-Dxx='' -Dxx=" ./job/job.json
